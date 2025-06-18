@@ -1,0 +1,362 @@
+
+.f-12{
+    font-size: 12px;
+}
+.f-14{
+    font-size: 14px;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-18{
+    font-size: 18px;
+}
+.f-20{
+    font-size: 20px;
+}
+.f-24{
+    font-size: 24px;
+}
+.f-weight{
+    font-weight: bold;
+}
+.text-c{
+    text-align: center;
+}
+.text-r{
+    text-align: right;
+}
+.mart-10{
+    margin-top: 10px;
+}
+.mart-15{
+    margin-top: 15px;
+}
+.marb-15{
+    margin-bottom: 15px;
+}
+.mart-30{
+    margin-top: 30px;
+}
+.marl-10{
+    margin-left: 10px;
+}
+.marl-15{
+    margin-left: 15px;
+}
+.marl-20{
+    margin-left: 20px;
+}
+.marl-40{
+    margin-left: 40px;
+}
+.marr-10{
+    margin-right: 10px;
+}
+.marr-15{
+    margin-right: 15px;
+}
+.marr-20{
+    margin-right: 20px;
+}
+
+.padd20{
+    padding: 10px 0;
+}
+.padd15{
+    padding: 15px 0;
+}
+.paddlr20{
+    padding: 10px;
+}
+.padd16{
+    padding: 16px;
+}
+.border-rad{
+    border-radius: 5px;
+}
+.border-org{
+    border: 1px solid rgba(255, 145, 0, 1);
+}
+.border-666{
+    border: 1px solid #666;
+}
+.border-eee{
+    border: 1px solid #eee;
+}
+.ver-middle{
+    vertical-align: middle;
+}
+.cor-gay{
+    color: #6B7280;
+}
+.cor-white{
+    color: #fff;
+}
+.cor-geen{
+    color: #02c955;
+}
+.cor-000{
+    color: #000;
+}
+
+.border-b{
+    border-bottom: 1px solid #eee;
+}
+.border-no{
+    border: 0 !important;
+}
+.line-height-45{
+    line-height: 45px;
+}
+.line-height-12{
+    line-height: 1.2 !important;
+}
+.bg-white{
+    background: #fff;
+}
+.bg-org{
+    background: rgba(255, 145, 0, 1);
+}
+.bg-fbfbfb{
+    background: #fbfbfb;
+}
+.bg-f8f8f8{
+    background: #f8f8f8;
+}
+.bg-geen{
+    background: #09b500;
+}
+.img60{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 4px 3px 10px -8px rgba(0, 0, 0, 0.4);
+}
+.img40{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 4px 3px 10px -8px rgba(0, 0, 0, 0.4);
+}
+html,*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+
+}
+body{
+    background: #fff;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+html,body{
+    width: 100%;
+}
+img{
+    vertical-align: top;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.col1{
+    width: 50%;
+}
+.col2{
+    width: 35%;
+}
+.col3{
+    width: 15%;
+}
+.col4{
+    width: 70%;
+}
+.col5{
+    width: 20%;
+}
+.col6{
+    width: 60%;
+}
+.col7{
+    width: 10%;
+}
+.cenL{
+    text-align: left;
+}
+.cenC{
+    text-align: center;
+}
+.cenR{
+    text-align: right;
+}
+.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clear{zoom:1}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*定位 上下左右居中*/
+.center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*定位 固定上下左右居中*/
+.centerF {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*定位 上下居中*/
+.centerY {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*定位 左右居中*/
+.centerX {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*强制不换行*/
+.line {
+    white-space: nowrap;
+}
+/*自动换行*/
+.linebreak {
+    word-wrap: break-word;
+    word-break: normal;
+}
+/*隐藏*/
+.hide {
+    display: none !important;
+}
+/*单行 超出用省略号代替*/
+.line11 {
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.line1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.line2 {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.line3 {
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* 用来限制在一个块元素显示的文本的行数 */
+    -webkit-line-clamp: 3;
+
+}
+.line7 {
+    -webkit-line-clamp: 7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.ub {
+    display: flex;
+}
+
+.ub-f1 {
+    flex: 1;
+}
+
+.ub-f2 {
+    flex: 2;
+}
+
+.ub-f3 {
+    flex: 3;
+}
+
+.ub-f4 {
+    flex: 4;
+}
+
+/*定于为弹性布局 主轴上到下垂直排列 */
+.flex_r {}
+
+.ubv {
+    display: flex !important;
+    flex-direction: column;
+}
+
+/*定于为弹性布局 超出自动换行 */
+.ubw {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*主轴对齐方式(axis), flex-start(默认顶部或左对齐)、center(中间对齐)、flex-end(底部或右对齐) 主轴上的对齐方式*/
+.ub-ac {
+    justify-content: center;
+}
+
+.ub-ae {
+    justify-content: flex-end;
+}
+
+.ub-ab {
+    justify-content: space-between;
+}
+
+.ub-ar {
+    justify-content: space-around;
+}
+
+.ub-xs {
+    align-items: stretch;
+}
+
+/*交叉轴对齐方式（item有高度时体现） stretch(默认未设置高度或设为auto，将占满整个容器的高度)*/
+/*交叉轴起点对齐(flex-start)、交叉轴对齐（center）、交叉轴终点对齐（flex-end）*/
+.ub-x {
+    align-items: flex-start;
+}
+
+.ub-xc {
+    align-items: center;
+}
+
+.ub-xe {
+    align-items: flex-end;
+}
+
+.kg{ height:25px; line-height:25px; background:#6bde5d;; width:50px; border-radius:20px; border:1px solid rgb(76, 217, 100); position:relative; float:right;}
+.hk{  height:25px; width:25px; border-radius:25px; background:#fff; display: block; margin-left:35px; transition: margin-left 0.3s}
+.kg label{ height:25px; line-height:25px; width:35px; text-align:center; color:#fff; position:absolute; left:0px; top:0px; font-size:12px;}
+.move1{ margin-left:0px;}
+.move2{ margin-left:35px;}
+.cor-red{
+    color: #ff0000;
+}
+.border-b-eee{
+    border-bottom: 1px solid #ccc;
+}

